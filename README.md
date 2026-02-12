@@ -27,10 +27,10 @@ npm install
 
 2. Start the development server:
 ```bash
-npm run dev
+npm start
 ```
 
-3. Open your browser and navigate to the URL shown in the terminal (usually `http://localhost:5173`)
+3. Open your browser and navigate to `http://localhost:3000` (the app will automatically open)
 
 ## How It Works
 
@@ -108,12 +108,12 @@ This simulates real-world API behavior where responses can vary.
 
 ```
 bhumio/
+├── public/
+│   └── index.html       # HTML template
 ├── src/
-│   ├── App.jsx          # Main component with form and logic
-│   └── main.jsx         # React entry point
-├── index.html           # HTML template
+│   ├── App.js           # Main component with form and logic
+│   └── index.js         # React entry point
 ├── package.json         # Dependencies
-├── vite.config.js       # Vite configuration
 └── README.md           # This file
 ```
 
@@ -135,11 +135,17 @@ All state is managed using React hooks:
 
 - **React 18** - UI framework
 - **Bootstrap 5** - Styling
-- **Vite** - Build tool and dev server
+- **Create React App** - Build tool and dev server
 
 ## Notes
 
 - The form resets automatically 3 seconds after successful submission
-- All logic is contained in `App.jsx` for simplicity
+- All logic is contained in `App.js` for simplicity
 - Code includes comments explaining important sections
 - The solution is intentionally minimal and beginner-friendly
+
+## Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
